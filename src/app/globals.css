@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
+
 html,
 body {
   padding: 0;
@@ -15,44 +40,46 @@ body {
   box-sizing: border-box;
 }
 
-.scorecard-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 1rem;
-  align-items: start;
-}
-
-@media (max-width: 768px) {
+@layer components {
   .scorecard-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1rem;
+    align-items: start;
   }
-}
 
-.cap-number-badge {
-  @apply w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold;
-}
+  @media (max-width: 768px) {
+    .scorecard-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
 
-.player-row {
-  @apply flex items-center justify-between p-2 border-b border-gray-100 hover:bg-gray-50;
-}
+  .cap-number-badge {
+    @apply w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold;
+  }
 
-.stat-button {
-  @apply px-2 py-1 text-xs font-medium rounded border;
-}
+  .player-row {
+    @apply flex items-center justify-between p-2 border-b border-gray-100 hover:bg-gray-50;
+  }
 
-.stat-button-goal {
-  @apply bg-green-100 text-green-800 border-green-200 hover:bg-green-200;
-}
+  .stat-button {
+    @apply px-2 py-1 text-xs font-medium rounded border;
+  }
 
-.stat-button-kickout {
-  @apply bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200;
-}
+  .stat-button-goal {
+    @apply bg-green-100 text-green-800 border-green-200 hover:bg-green-200;
+  }
 
-.stat-button-yellow {
-  @apply bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200;
-}
+  .stat-button-kickout {
+    @apply bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200;
+  }
 
-.stat-button-red {
-  @apply bg-red-100 text-red-800 border-red-200 hover:bg-red-200;
+  .stat-button-yellow {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-200 hover:bg-yellow-200;
+  }
+
+  .stat-button-red {
+    @apply bg-red-100 text-red-800 border-red-200 hover:bg-red-200;
+  }
 }

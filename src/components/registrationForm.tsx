@@ -1,19 +1,18 @@
-// src/components/RegistrationForm.tsx
 'use client';
 
 import React, { useState } from 'react';
 import { Team, Player } from '@/types';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/Button'; // Fixed: uppercase B
+import { Input } from '@/components/ui/Input'; // Fixed: uppercase I
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from '@/components/ui/dialog';
+} from '@/components/ui/Dialog'; // Fixed: uppercase D
 import { Plus, Trash2 } from 'lucide-react';
-import { Label } from '@/components/ui/label';
+import { Label } from '@/components/ui/Label'; // Fixed: uppercase L
 
 interface RegistrationFormProps {
   isOpen: boolean;
